@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admission Application Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-top: 30px;
+    }
+
+    form {
+      background-color: #fff;
+      width: 450px;
+      max-width: 90%;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: #684caf;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 8px;
+      padding: 12px;
+      width: 100%;
+      transition: background-color 0.3s;
+      margin-top: 20px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #5fa045;
+    }
+
+    /* Horizontal radio buttons */
+    .radio-group {
+      display: flex;
+      gap: 30px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+
+    .radio-group input[type="radio"] {
+      position: absolute; /* keep them visually hidden but clickable */
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .radio-label {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      font-weight: normal;
+      color: #333;
+      user-select: none;
+    }
+
+    .radio-label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border: 2px solid #684caf;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .radio-group input[type="radio"]:checked + .radio-label::before {
+      background-color: #684caf;
+      border-color: #684caf;
+    }
+
+    .radio-label::after {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #fff;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .radio-group input[type="radio"]:checked + .radio-label::after {
+      opacity: 1;
+    }
+
+    .radio-label:hover::before {
+      border-color: #5fa045;
+    }
+
+    /* Custom select */
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 10px center;
+      background-color: #fff;
+      background-size: 16px;
+      padding-right: 35px;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: #684caf;
+      box-shadow: 0 0 5px rgba(104,76,175,0.5);
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #684caf;
+      box-shadow: 0 0 5px rgba(104,76,175,0.3);
+    }
+  </style>
+
+
+</head>
+<body>
+
+<h2>Admission Application Form</h2>
+
+<form action="submit.html" method="post">
+  <label for="fullname">Full Name:</label>
+  <input type="text" id="fullname" name="fullname" required>
+
+  <label for="dob">Date of Birth:</label>
+  <input type="date" id="dob" name="dob" required min="1999-01-01" max="2009-12-31">
+
+  <label>Gender:</label>
+  <div class="radio-group">
+    <input type="radio" id="male" name="gender" value="Male" required>
+    <label for="male" class="radio-label">Male</label>
+
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female" class="radio-label">Female</label>
+  </div>
+
+  <label for="email">Email Address:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" name="phone" required>
+
+    <label for="education">Education Level:</label>
+  <select id="education" name="education" required>
+    <option value="">--Select Education Level--</option>
+    <option value="certificate">Certificate</option>
+    <option value="spm">SPM</option>
+    <option value="diploma">Diploma</option>
+    <option value="degree">Degree</option>
+  </select>
+
+   <label for="school">School Name:</label>
+  <input type="text" id="school" name="school" required>
+
+  <label for="program">Program Applying For:</label>
+  <select id="program" name="program" required>
+    <option value="">--Select Program--</option>
+    <option value="Diploma">Diploma in Computing</option>
+    <option value="Degree">Degree in Computing</option>
+    <option value="ShortCourses">Short Courses</option>
+  </select>
+
+  <label for="address">Home Address:</label>
+  <textarea id="address" name="address" rows="3" required></textarea>
+
+  <input type="submit" value="Submit Application">
+</form>
+
+<script>
+document.querySelector("form").addEventListener("submit", function(event) {
+
+//fullname only can type letter and space
+    const fullName = document.getElementById("fullname").value.trim();
+    const nameRegex = /^[A-Za-z\s]{3,50}$/;
+    if (!nameRegex.test(fullName)) {
+        alert("Full Name must contain only letters and spaces (3–50 characters).");
+        event.preventDefault();
+        return;}
+
+//the correct email format
+    const email = document.getElementById("email").value.trim();
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/;
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        event.preventDefault();
+        return;  }
+
+//for phone number only can 10-11digit
+    const phone = document.getElementById("phone").value.trim();
+    const phoneRegex = /^[0-9]{10,11}$/;
+    if (!phoneRegex.test(phone)) {
+        alert("Phone number must be 10–11 digits (numbers only).");
+        event.preventDefault();  
+        return;}
+});
+</script>
+
+</body>
+</html>

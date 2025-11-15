@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programmes</title>
+
+<style>
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    line-height: 1.5;
+}
+table {
+    text-align: justify;
+}
+
+.title {
+    width: 28%;
+    font-weight: bold;
+    color: red;
+}
+/* Hide all sections first */
+.section {
+    display: none;
+}
+
+/* Style for popup background */
+#popup-bg {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+     background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup box */
+#popup-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 0 15px black;
+}
+
+.popup-btn {
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+// Show only selected section
+function showSection(sectionId) {
+    document.getElementById("popup-bg").style.display = "none";
+
+    document.querySelectorAll(".section").forEach(sec => {
+        sec.style.display = "none";
+    });
+
+    document.getElementById(sectionId).style.display = "block";
+}
+</script>
+
+<!-- CUSTOM POPUP -->
+<div id="popup-bg">
+    <div id="popup-box">
+        <h3>Computing Programme</h3>
+        <p>Click the Programme you are interested:</p>
+        <button class="popup-btn" onclick="showSection('diploma')">Diploma</button>
+        <button class="popup-btn" onclick="showSection('degree')">Degree</button>
+        <button class="popup-btn" onclick="showSection('shortcourse')">Short Courses</button>
+    </div>
+</div>
+
+
+<!-- ========= DIPLOMA SECTION ========= -->
+<div id="diploma" class="section">
+<h2>Diploma Programmes</h2>
+<p>Diploma programmes provide foundational knowledge in computing and practical hands-on skills, preparing students for entry-level positions or further studies.</p>
+
+<h2>Suitable for</h2>
+<ul>
+<li>Secondary school graduates</li>
+<li>Students seeking a quicker entry into the workforce</li>
+<li>Students planning to continue into degree programmes</li>
+</ul>
+
+<table>
+<tr>
+<td class="title">Course Outline</td>
+<td>: Core subjects may include Introduction to Programming, Database Fundamentals, Web Development, Networking Basics, and IT Project Management.</td>
+</tr>
+
+<tr>
+<td class="title">Programme Duration</td>
+<td>: Typically 2–2.5 years full-time; part-time options may also be available.</td>
+</tr>
+
+<tr>
+<td class="title">Entry Requirements</td>
+<td>: Minimum academic qualifications, basic mathematics proficiency, and sometimes English proficiency.</td>
+</tr>
+
+<tr>
+<td class="title">Career Pathways</td>
+<td>: IT support, junior software developer, web developer, network administrator, database assistant.</td>
+</tr>
+
+<tr>
+<td class="title">Progression Opportunities</td>
+<td>: Diploma graduates may continue to Degree programmes within the School of Computing or transfer to related institutions.</td>
+</tr>
+</table>
+</div>
+
+<!-- ========= DEGREE SECTION ========= -->
+<div id="degree" class="section">
+<h2>Degree Programmes</h2>
+<p>Degree programmes provide in-depth, advanced computing education, preparing students for professional careers or research in the IT field.</p>
+
+<h2>Suitable for</h2>
+<ul>
+<li>Students aiming for technical or professional careers in computing and information technology.</li>
+</ul>
+
+<table>
+<tr>
+<td class="title">Course Outline</td>
+<td>: Include subjects such as Data Structures and Algorithms, Software Engineering, Cybersecurity, Artificial Intelligence, Cloud Computing, and Capstone Projects.</td>
+</tr>
+
+<tr>
+<td class="title">Programme Duration</td>
+<td>: Typically 3–4 years full-time; part-time options may exist.
+
+<tr>
+<td class="title">Entry Requirements</td>
+<td>: Completion of high school or diploma, minimum grades in mathematics/science subjects, and English proficiency. Some programmes may require interviews or aptitude tests.</td>
+</tr>
+
+<tr>
+<td class="title">Career Pathways</td>
+<td>: Software engineer, data analyst, network engineer, cybersecurity analyst, AI/machine learning specialist, IT project manager.</td>
+</tr>
+
+<tr>
+<td class="title">Internship Opportunities</td>
+<td>: Structured internships with partner IT companies to gain industry experience.</td>
+</tr>
+</table>
+</div>
+
+<!-- ========= SHORT COURSE SECTION ========= -->
+<div id="shortcourse" class="section">
+<h2>Short Courses</h2>
+<p>Short courses are flexible, skill-focused programmes designed to enhance specific competencies for students or working professionals.</p>
+
+<h2>Designed for</h2>
+<ul>
+<li>Working professionals seeking to upgrade skills.</li>
+<li>Students wanting additional skills outside their main studies.</li>
+<li>Individuals interested in specific IT competencies.</li>
+</ul>
+
+<table>
+<tr>
+<td class="title">List of Courses</td>
+<td>: Include Web Development Bootcamp, Python Programming, Data Analytics, Cybersecurity Fundamentals, Cloud Technologies.</td>
+</tr>
+
+<tr>
+<td class="title">Duration</td>
+<td>: From a few days to several months depending on course intensity.</td>
+</tr>
+
+<tr>
+<td class="title">Entry Requirements</td>
+<td>: Usually open to all; some advanced courses may require prior knowledge.</td>
+</tr>
+
+<tr>
+<td class="title">Certification</td>
+<td>: Certificate of Completion or Professional Certification issued upon successful completion.</td>
+</tr>
+
+<tr>
+<td class="title">Learning Outcomes</td>
+<td>: Students gain targeted practical skills, project-based experience, and industry-relevant competencies.</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>

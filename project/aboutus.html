@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us</title>
+
+<style>
+
+/* Global page style */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    line-height: 1.5;
+}
+
+/* Headings */
+h1 {
+    color: blue;
+    text-decoration: underline;
+}
+
+h2 {
+    text-align: center;
+    color: #000;
+}
+
+/* ---------------------------------- */
+/*   DEAN IMAGES — LARGE, RESPONSIVE  */
+/* ---------------------------------- */
+.dean-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.dean-grid img {
+    width: 100%;
+    height: 480px;   /* BIG SIZE */
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* Dean text */
+.name {
+    font-weight: bold;
+}
+
+.title {
+    text-decoration: underline;
+}
+
+/* ---------------------------------- */
+/*   FACILITY IMAGES — SMALLER SIZE   */
+/* ---------------------------------- */
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+    margin: auto;
+    max-width: 1100px;
+}
+
+.facility-grid img {
+    width: 100%;
+    height: 180px;  /* SMALL SIZE */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Facility title */
+.facility {
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Mission</h1>
+<p>
+Our mission is to provide high-quality computing education that combines academic excellence with real-world applications.
+We aim to equip students with technical skills, creative thinking, and problem-solving abilities needed to succeed in the fast-evolving digital world.
+</p>
+
+<h1>Vision</h1>
+<p>
+To become a leading School of Computing recognized for innovation, research excellence, and industry-ready graduates who contribute to global technological advancement.
+</p>
+
+<h1>Objectives</h1>
+<ul>
+<li>To deliver relevant and up-to-date computing programmes that meet industry needs.</li>
+<li>To develop graduates with strong technical, analytical, and communication skills.</li>
+<li>To encourage innovation, creativity, and entrepreneurship in the field of technology.</li>
+<li>To foster partnerships with industries, research institutions, and communities.</li>
+<li>To promote lifelong learning and professional development among students and staff.</li>
+</ul>
+
+<h1>History</h1>
+<p>
+The School of Computing was established with the goal of nurturing future technology professionals.
+Over the years, it has grown into a vibrant academic community offering diploma, degree, and short courses in computing disciplines.
+The school focuses on both theoretical foundations and hands-on practice, preparing students for real-world challenges in areas such as software development, data analytics, and networking.
+</p>
+
+<br><br>
+
+<!-- Dean Section -->
+<h2>Our Leadership</h2>
+<div class="dean-grid">
+
+    <div>
+        <img src="deans.jpg">
+        <p class="name">Dr. Michael Anderson</p>
+        <p class="title">Dean of School of Computing</p>
+    </div>
+
+    <div>
+        <img src="deans(1).jpg">
+        <p class="name">Dr. Emily Roberts</p>
+        <p class="title">Vice Dean of School of Computing</p>
+    </div>
+
+</div>
+
+<br><br>
+
+<!-- Facility Section -->
+<p class="facility">Here are our facilities</p>
+
+<div class="facility-grid">
+    <img src="library.jpg">
+    <img src="swimmingpool.jpg">
+    <img src="sciencelab.jpg">
+    <img src="basketball.jpg">
+</div>
+
+</body>
+</html>
