@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Room Reservation</title>
+<link rel="icon" href="sunflower.jpg" type="image/jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        background-color: #dff5ff;
+        font-family: Arial;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    table {
+        width: 90%;
+        border-collapse: collapse;
+        background: #dff5ff;
+        padding: 10px;
+        border: 2px solid black;
+        margin: auto;
+    }
+
+    .title {
+        color: blue;
+        font-weight: bold;
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    td {
+        padding: 6px;
+        vertical-align: top;
+    }
+
+    input[type=text], input[type=date], textarea, select {
+        background: #dff5ff;
+        width: 160px;
+        padding: 4px;
+    }
+
+    textarea {
+        width: 200px;
+        height: 120px;
+        resize: none;
+    }
+
+    button {
+        padding: 5px 15px;
+    }
+</style>
+
+</head>
+<body>
+
+<h2>Room Reservations</h2>
+
+<!-- PERSONAL DETAILS -->
+<table>
+    <tr>
+        <td class="title" colspan="4">Personal details *</td>
+    </tr>
+
+    <tr>
+        <td>Full Name</td>
+        <td>: <input type="text"></td>
+        <td>IC No.</td>
+        <td>: <input type="text"></td>
+    </tr>
+
+    <tr>
+        <td>Email address</td>
+        <td>: <input type="text"></td>
+        <td>Contact No.</td>
+        <td>: <input type="text"></td>
+    </tr>
+</table>
+
+<br>
+
+<!-- RESERVATION DETAILS -->
+<table>
+    <tr>
+        <td class="title" colspan="4">Reservations *</td>
+    </tr>
+
+    <tr>
+        <td>Number of Room(s)</td>
+        <td>: 
+            <select>
+                <option>- Selection -</option>
+                <option>1</option><option>2</option><option>3</option>
+            </select>
+        </td>
+
+        <td>Payment Method</td>
+        <td>
+            <input type="radio" name="pay"> Cash  
+            <input type="radio" name="pay"> TNG
+        </td>
+    </tr>
+
+    <tr>
+        <td>Number of Adult(s)</td>
+        <td>: 
+            <select>
+                <option>- Selection -</option>
+                <option>1</option><option>2</option><option>3</option>
+            </select>
+        </td>
+
+        <td>Do you have any special requests?</td>
+        <td rowspan="5">
+            <textarea></textarea>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Number of Children</td>
+        <td>: 
+            <select>
+                <option>- Selection -</option>
+                <option>0</option><option>1</option><option>2</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Check-in Date</td>
+        <td>: <input type="date"></td>
+    </tr>
+
+    <tr>
+        <td>Check-out Date</td>
+        <td>: <input type="date"></td>
+    </tr>
+
+    <tr>
+        <td>Room Preference</td>
+        <td>
+            : <input type="radio" name="room"> Deluxe <br>
+            : <input type="radio" name="room"> Suite
+        </td>
+    </tr>
+</table>
+
+<!-- Buttons centered without DIV -->
+<center>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</center>
+
+</body>
+</html>
