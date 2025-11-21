@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><head>
+<title>JavaScript</title>
+<link rel=icon href=sunflower.jpg type=image/jpg>
+<meta name=viewport content=width=device-width, initial-scale=1.0>
+
+
+
+<script>
+
+function changeColor(newcolor)
+{
+const tochange = document.getElementById("textcolor");
+tochange.style.color = newcolor;
+}
+</script>
+
+<br><br>
+</head>
+<body>
+<p id="textcolor">Change HTML p element text color</p>
+<button onclick="changeColor('blue');">blue</button>
+<button onclick="changeColor('red');">red</button>
+
+</body></html>

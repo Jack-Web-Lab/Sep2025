@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><head><title>JavaScript</title>
+<link rel=icon href=sunflower.jpg type=image/jpg>
+<meta name=viewport content=width=device-width, initial-scale=1.0>
+<script>  
+  function checknumber(){
+    var getnumber = document.getElementById("insertnumber");
+  
+    if(getnumber.value<0){  
+      alert("Number inserted (" + getnumber.value + ") is grad F.");  
+    }  
+    else if ((getnumber.value<=30) && (getnumber.value<=100)){
+      alert("Number inserted (" + getnumber.value + ") is Grade D.");  
+    }
+    
+    else if ((getnumber.value<=50) && (getnumber.value<=100)){
+      alert("Number inserted (" + getnumber.value + ") is is Grade C.");  
+    }
+    
+    else if ((getnumber.value<=70) && (getnumber.value<=100)){
+      alert("Number inserted (" + getnumber.value + ") is Grade B+.");  
+    }
+    
+    else if ((getnumber.value<=90) && (getnumber.value<=100)){
+      alert("Number inserted (" + getnumber.value + ") is Grade A-.");  
+    }
+    
+    else if ((getnumber.value>90) && (getnumber.value<=100)){
+      alert("Number inserted (" + getnumber.value + ") is Grade A+.");  
+    }
+    
+}
+</script> </head>
+<body>
+<h1>JavaScript - If … Else</h1>
+<form>
+Insert a number&nbsp;:&nbsp;&nbsp;
+<input type=number name=insertnumber id=insertnumber onblur=checknumber()>
+
+<button onclick="checknumber()">Click Me</button>
+</form>
+</body></html>
+
+
+
