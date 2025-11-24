@@ -1,0 +1,46 @@
+
+<script>
+    function changesublist() {
+        var selectedOption = document.getElementById("dropdownid").value;
+        var chkboxarea = document.getElementById("chkboxarea");
+        chkboxarea.innerHTML ="";
+
+        switch (selectedOption) {
+            case "Option1" :
+                insertchkbox("DCS1003");
+                insertchkbox("DCS1303");
+                insertchkbox("DCS3003");
+                break; 
+            case "Option2" :
+                insertchkbox("DIB1003");
+                insertchkbox("DIB2023");
+                insertchkbox("DIB3023");
+                break; 
+            case "Option3" :
+                insertchkbox("DAS1003");
+                insertchkbox("DAS3003");
+                break;
+            case "NULL":
+                break;
+            default:
+                break;
+        }
+    }
+
+    function insertchkbox (chkboxtext) {
+        var checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.name = "checkbox";
+        checkbox.value = "chkboxtext";
+
+        var chkboxtextElement = 
+document.createElement("chkboxtext");
+chkboxtextElement.appendChild(document.createTextNode(chkboxtext));
+         
+        var chkboxarea = document.getElementById("chkboxarea");
+        chkboxarea.appendChild(chkboxtextElement);
+
+    }
+
+    changesublist;
+</script>
